@@ -35,6 +35,11 @@ taki2 = {
 'labour': {'actualrate': 16.9, 'standardrate': 13.9, 'actualQ': 4360.0, 'standardQ': 4610.0}
 }
 
+itemstemp = {
+'labour': {'actualrate': 12.4, 'standardrate': 12, 'actualQ': 3500, 'standardQ': 3*1200},
+'overhead': {'actualrate': 71300/1200, 'standardrate': 20, 'actualQ': 1200, 'standardQ': 3*1200}
+}
+
 for item in items:
 	print("#", item, "#", sep="")
 	print('quantity', calcQuantityVar(items[item]))
@@ -61,3 +66,10 @@ for item in taki2:
 	print('total', calcTotalVar(taki2[item]))
 	print('price', calcPriceVar(taki2[item]))
 	print('quantity', calcQuantityVar(taki2[item]))
+	
+print('###itemstemp')
+for item in itemstemp:
+	print(item)
+	print('total', calcTotalVar(itemstemp[item]))
+	print('price', calcPriceVar(itemstemp[item]))
+	print('quantity', calcQuantityVar(itemstemp[item]))
